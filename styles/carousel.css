@@ -1,0 +1,163 @@
+.carousel-list-wrapper {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
+}
+
+.carousel-item-wrapper {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 90%;
+}
+
+.carousel-list {
+    cursor: pointer;
+    margin: 0 0 1px 0;
+    width: 100%;
+}
+
+.carousel-item {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+
+    transition: 0.1s left ease;
+}
+.carousel-item:hover, .carousel-item:active, .carousel-item:focus {
+    background-color: #FDFCFC;
+}
+
+.carousel-item-selected {
+    display: block;
+}
+
+.carousel-item-selected > .carousel-item-body {
+    /* display: block; */
+    visibility: visible;
+    max-height: 500px;
+    transition: max-height 0.86s ease-out;
+
+    /* transform: scaleY(1); */
+}
+
+.carousel-item-header {
+    display: block;
+}
+
+.carousel-item-body {
+    /* display: none; */
+    visibility: hidden;
+    max-height: 0px;
+    
+    /* transform: scaleY(0);     */
+    /* transform-origin: top; */
+    /* transition: max-height 0.26s ease; */
+
+}
+
+@media screen and (min-width: 736px) {
+
+    .carousel-list-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+        width: 80%;
+    }
+
+    .carousel-item-wrapper {
+        padding: 0;
+        margin: 0;
+    
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 500px;
+
+        overflow-y: hidden;
+        overflow-x: hidden;
+        white-space: nowrap;
+    }
+
+    .carousel-list {
+        cursor: pointer;
+        margin: 0 0 1px 0;
+        color: #B3B4B6;
+        width: 100%;
+        height: auto;
+    }
+    .carousel-list:hover, .carousel-list:active, .carousel-list:focus {
+        color: #394757;
+    }
+    .carousel-list-selected p {
+        color: #394757;
+    }
+
+    .carousel-item {
+        background-color: #FDFCFC;
+        position: absolute;
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        max-width: 500px;
+        max-height: 400px;
+        padding: 0;
+        margin: 0 0px;
+
+        white-space: normal;
+        transition: 0.1s left ease;
+    }
+
+    .carousel-item-selected {
+        position: absolute;
+        display: inline-block;
+        z-index: 10;
+
+        width: 500px;
+        height: 400px;
+    }
+
+    .carousel-item-selected > .carousel-item-header {
+        height: auto;
+    }
+    .carousel-item-selected > .carousel-item-body {
+        display: block;
+    }
+
+    .carousel-item-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .carousel-item-body {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .carousel-list-wrapper {
+        width: 60%;
+    }
+
+}

@@ -1,0 +1,14 @@
+{
+  "name": "johan-portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio. Simple static website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Johan Glud Jensen",
+  "license": "MIT",
+  "dependencies": {
+    "carousel-menu": "^1.0.0"
+  }
+}
