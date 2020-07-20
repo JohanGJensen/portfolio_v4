@@ -48,12 +48,11 @@
 }
 
 .carousel-item-selected > .carousel-item-body {
-    /* display: block; */
     visibility: visible;
+    opacity: 1;
     max-height: 500px;
-    transition: max-height 0.86s ease-out;
-
-    /* transform: scaleY(1); */
+    transition: max-height 0.6s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
 }
 
 .carousel-item-header {
@@ -61,14 +60,9 @@
 }
 
 .carousel-item-body {
-    /* display: none; */
     visibility: hidden;
+    opacity: 0;
     max-height: 0px;
-    
-    /* transform: scaleY(0);     */
-    /* transform-origin: top; */
-    /* transition: max-height 0.26s ease; */
-
 }
 
 @media screen and (min-width: 736px) {
