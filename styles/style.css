@@ -28,6 +28,12 @@ html body {
 #site-progress::-moz-progress-value {
     background: #C86060;
 }
+#site-progress::-webkit-progress-bar {
+    background: #C86060;
+}
+#site-progress::-webkit-progress-value {
+    background: #C86060;
+}
 
 .container {
     display: flex;
