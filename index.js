@@ -1,11 +1,12 @@
 const progress = document.getElementById('site-progress');
+const body = document.getElementsByTagName('body');
 
 progress.setAttribute('value', window.scrollY);
 
 const siteProgress = () => {
-    const win = this;
+    let totalHeight = body[0].clientHeight - this.innerHeight;
 
-    progress.setAttribute('value', (win.scrollY / win.scrollMaxY) * 100);
+    progress.setAttribute('value', (this.scrollY / totalHeight) * 100);
 };
 
 window.addEventListener('scroll', siteProgress);

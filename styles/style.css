@@ -8,8 +8,9 @@ html body {
     position: fixed;
     top: 0;
     left: 0;
-    -webkit-appearance: none;
+    /* -webkit-appearance: none; */
     appearance: none;
+    /* -moz-appearance: none; */
     z-index: 99;
 
     margin: 0;
@@ -23,16 +24,16 @@ html body {
     width: 100%;
 }
 #site-progress::-moz-progress-bar {
-    background: #C86060;
+    background-color: #C86060;
 }
 #site-progress::-moz-progress-value {
-    background: #C86060;
+    background-color: #C86060;
 }
-#site-progress::-webkit-progress-bar {
-    background: #C86060;
-}
+/* #site-progress::-webkit-progress-bar {
+    background-color: #C86060;
+} */
 #site-progress::-webkit-progress-value {
-    background: #C86060;
+    background-color: #C86060;
 }
 
 .container {
