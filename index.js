@@ -178,30 +178,6 @@ const items = [
       },
     ],
   },
-  //   {
-  //     li: "Docker",
-  //     children: [
-  //       {
-  //         element: "div",
-  //         class: "carousel-item-header",
-  //         style: "background-color: #35A0F0",
-  //         children: [{ element: "h3", text: "Docker" }],
-  //       },
-  //       {
-  //         element: "div",
-  //         class: "carousel-item-body",
-  //         children: [
-  //           {
-  //             element: "p",
-  //             text: `
-  //                                 I use Docker daily, mainly to launch the containers<br>
-  //                                 needed to perform my tasks at hand.
-  // `,
-  //           },
-  //         ],
-  //       },
-  //     ],
-  //   },
 ];
 
 const wList = document.getElementsByClassName("carousel-list-know");
