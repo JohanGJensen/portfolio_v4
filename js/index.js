@@ -183,7 +183,21 @@ const items = [
 const wList = document.getElementsByClassName("carousel-list-know");
 const wItem = document.getElementsByClassName("carousel-item-know");
 
-setListAndItems(wList, wItem, items);
+let listClasses = {
+  wrapper: "carousel-list-wrapper",
+  selected: "carousel-list-selected",
+  base: "carousel-list",
+  hover: "carousel-list-hover",
+};
+
+let itemClasses = {
+  wrapper: "carousel-item-wrapper",
+  selected: "carousel-item-selected",
+  base: "carousel-item",
+  hover: "carousel-item-hover",
+};
+const carousel = new Carousel(listClasses, itemClasses);
+carousel.setListAndItems(wList, wItem, items);
 
 const getIndex = (cls) => {
   let idx = 0;
