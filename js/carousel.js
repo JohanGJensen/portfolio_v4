@@ -176,42 +176,44 @@ function onLeave() {
 }
 
 function onClick() {
-  var ELItemWrapper = document.getElementsByClassName(wrapper),
-    ELListWrapper = document.getElementsByClassName(lWrapper),
-    ELItemSelected = document.getElementsByClassName(selected),
-    ELlistSelected = document.getElementsByClassName(selectedList);
+  const ELItemWrapper = document.getElementsByClassName(wrapper);
+  const ELListWrapper = document.getElementsByClassName(lWrapper);
+  const ELItemSelected = document.getElementsByClassName(selected);
+  const ELlistSelected = document.getElementsByClassName(selectedList);
+
   if (
     this.className.includes(listCls) &&
     !this.className.includes(selectedList)
   ) {
-    var carouselChildren = ELItemWrapper[0].childNodes,
-      self = this;
-    return (
-      ELlistSelected[0].classList.remove(selectedList),
-      this.classList.add(selectedList),
-      carouselChildren.forEach(function (child) {
-        if (void 0 !== self.uid && child.uid === self.uid)
-          return (
-            ELItemSelected[0].classList.remove(selected),
-            child.classList.add(selected)
-          );
-      })
-    );
+    const carouselChildren = ELItemWrapper[0].childNodes;
+    const self = this;
+
+    ELlistSelected[0].classList.remove(selectedList);
+
+    this.classList.add(selectedList);
+
+    carouselChildren.forEach(function (child) {
+      if (child.uid === self.uid) {
+        ELItemSelected[0].classList.remove(selected);
+        child.classList.add(selected);
+      }
+    });
   }
+
   if (this.className.includes(itemCls) && !this.className.includes(selected)) {
-    var carouselChildren2 = ELListWrapper[0].childNodes,
-      self = this;
-    return (
-      ELItemSelected[0].classList.remove(selected),
-      this.classList.add(selected),
-      carouselChildren2.forEach(function (child) {
-        if (void 0 !== self.uid && child.uid === self.uid)
-          return (
-            ELlistSelected[0].classList.remove(selectedList),
-            child.classList.add(selectedList)
-          );
-      })
-    );
+    const carouselChildren2 = ELListWrapper[0].childNodes;
+    const self = this;
+
+    ELItemSelected[0].classList.remove(selected);
+
+    this.classList.add(selected);
+
+    carouselChildren2.forEach(function (child) {
+      if (child.uid === self.uid) {
+        ELlistSelected[0].classList.remove(selectedList),
+          child.classList.add(selectedList);
+      }
+    });
   }
 }
 
