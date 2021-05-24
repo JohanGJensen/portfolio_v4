@@ -11,7 +11,7 @@ const siteProgress = () => {
 
 window.addEventListener("scroll", siteProgress);
 
-const items = [
+const skills = [
   {
     li: "Javascript",
     children: [
@@ -183,21 +183,21 @@ const items = [
 const wList = document.getElementsByClassName("carousel-list-know");
 const wItem = document.getElementsByClassName("carousel-item-know");
 
-let listClasses = {
-  wrapper: "carousel-list-wrapper",
+let knowListClasses = {
+  wrapper: "carousel-list-know",
   selected: "carousel-list-selected",
   base: "carousel-list",
   hover: "carousel-list-hover",
 };
-
-let itemClasses = {
-  wrapper: "carousel-item-wrapper",
+let knowItemClasses = {
+  wrapper: "carousel-item-know",
   selected: "carousel-item-selected",
   base: "carousel-item",
   hover: "carousel-item-hover",
 };
-const carousel = new Carousel(listClasses, itemClasses);
-carousel.setListAndItems(wList, wItem, items);
+
+const knowCarousel = new Carousel(knowListClasses, knowItemClasses);
+knowCarousel.setListAndItems(wList, wItem, skills);
 
 const getIndex = (cls) => {
   let idx = 0;

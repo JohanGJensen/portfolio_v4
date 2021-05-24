@@ -1,7 +1,7 @@
 // ###################### START CAROUSEL ##########################
-function Carousel(listClasses, itemClasses) {
-  this.listClasses = listClasses;
-  this.itemClasses = itemClasses;
+function Carousel(lClasses, iClasses) {
+  this.listSelectedRef = null;
+  this.itemSelectedRef = null;
 
   this.setListAndItems = function (listDest, itemDest, items) {
     this.setMenu(listDest, items);
@@ -18,15 +18,15 @@ function Carousel(listClasses, itemClasses) {
       return console.warn("Warning Element provided does not have a nodelist!");
 
     destEl.forEach((el) => {
-      if (!el.className || el.className.includes(itemClasses.base)) {
-        const { itemClasses, listClasses } = this;
+      if (!el.className || el.className.includes(iClasses.base)) {
+        const { setNewSelected } = (scope = this);
 
-        el.addEventListener("mouseenter", onEnter, true);
-        el.addEventListener("mouseleave", onLeave, true);
+        el.addEventListener("mouseenter", this.onEnter, true);
+        el.addEventListener("mouseleave", this.onLeave, true);
         el.addEventListener(
           "click",
           function onClickItem() {
-            setNewSelected(itemClasses, listClasses, this);
+            setNewSelected("item", this);
           },
           true
         );
@@ -44,12 +44,13 @@ function Carousel(listClasses, itemClasses) {
       return console.warn("Warning Element provided does not have a nodelist!");
 
     destEl.forEach((el) => {
-      if (!el.className || el.className.includes(listClasses.base)) {
-        const { listClasses, itemClasses } = this;
+      if (!el.className || el.className.includes(lClasses.base)) {
+        const { setNewSelected } = (scope = this);
+
         el.addEventListener(
           "click",
           function onClickList() {
-            setNewSelected(listClasses, itemClasses, this);
+            setNewSelected("list", this);
           },
           false
         );
@@ -62,7 +63,7 @@ function Carousel(listClasses, itemClasses) {
 
     // provide unique ID for each item, if none exist
     for (let i = 0; items.length > i; i++) {
-      if (!items[i].hasOwnProperty("uid")) getUID(items[i]);
+      if (!items[i].hasOwnProperty("uid")) this.setUID(items[i]);
     }
 
     // if collection provided, get the first element
@@ -74,7 +75,7 @@ function Carousel(listClasses, itemClasses) {
         "Warning: please provide setItems with a valid destination element!"
       );
 
-    const { selected, base } = itemClasses;
+    const { selected, base } = iClasses;
     let selectedExists;
 
     // checks destination element if there already is a selected class on one of the elements
@@ -90,10 +91,13 @@ function Carousel(listClasses, itemClasses) {
       const el = document.createElement(item.element || "div");
 
       if (!parent) {
-        if (!selectedExists && 0 >= idx) el.className += `${selected} `;
+        if (!selectedExists && 0 >= idx) {
+          el.className += `${selected} `;
+          this.itemSelectedRef = el;
+        }
 
         el.className += base;
-        el.uid = item.uid;
+        el.id = item.uid;
       }
 
       if (item.children) {
@@ -136,7 +140,7 @@ function Carousel(listClasses, itemClasses) {
     if (!Array.isArray(items)) return;
 
     for (let i = 0; items.length > i; i++)
-      items[i].hasOwnProperty("uid") || getUID(items[i]);
+      items[i].hasOwnProperty("uid") || this.setUID(items[i]);
 
     // if collection provided, get the first element
     if (destEl instanceof HTMLCollection) destEl = destEl.item(0);
@@ -147,7 +151,7 @@ function Carousel(listClasses, itemClasses) {
         "Warning: please provide setMenu with a valid destination element!"
       );
 
-    const { selected, base } = listClasses;
+    const { selected, base } = lClasses;
     let selectedExists;
 
     // checks destination element if there already is a selected class on one of the elements
@@ -161,56 +165,85 @@ function Carousel(listClasses, itemClasses) {
 
     items.forEach(function (item, idx) {
       const textTitle = document.createTextNode(item.li || "item");
-      const listEl = document.createElement("li");
+      const el = document.createElement("li");
       const titleEl = document.createElement("p");
 
       titleEl.appendChild(textTitle);
 
-      if (!selectedExists && 0 >= idx) listEl.className += " " + selected + " ";
+      if (!selectedExists && 0 >= idx) {
+        el.className += " " + selected + " ";
+        this.listSelectedRef = el;
+      }
 
-      listEl.appendChild(titleEl);
-      listEl.uid = item.uid;
-      listEl.className += base;
+      el.appendChild(titleEl);
+      el.id = item.uid;
+      el.className += base;
 
-      destEl.appendChild(listEl);
-    });
+      destEl.appendChild(el);
+    }, this);
 
     this.setListListeners(destEl);
   };
+
+  this.setSelectedRefs = (action, payload) => {
+    if (lClasses.base === action) {
+      this.listSelectedRef = payload;
+    }
+    if (iClasses.base === action) {
+      this.itemSelectedRef = payload;
+    }
+  };
+
+  this.setNewSelected = (type, el) => {
+    let target;
+    let other;
+    let targetSelect;
+    let otherSelect;
+
+    if (type === "item") {
+      target = iClasses;
+      other = lClasses;
+      targetSelect = this.itemSelectedRef;
+      otherSelect = this.listSelectedRef;
+    }
+    if (type === "list") {
+      target = lClasses;
+      other = iClasses;
+      targetSelect = this.listSelectedRef;
+      otherSelect = this.itemSelectedRef;
+    }
+    const otherWrapper = document.getElementsByClassName(other.wrapper);
+    const className = el.className;
+
+    if (className.includes(target.base) && !className.includes(targetSelect)) {
+      const itemChildren = otherWrapper[0].childNodes;
+
+      targetSelect.classList.remove(target.selected);
+      el.classList.add(target.selected);
+      this.setSelectedRefs(target.base, el);
+
+      itemChildren.forEach(function (child) {
+        if (child.id === el.id) {
+          otherSelect.classList.remove(other.selected);
+          child.classList.add(other.selected);
+          this.setSelectedRefs(other.base, child);
+        }
+      }, this);
+    }
+  };
+
+  this.onEnter = function () {
+    this.classList.add(iClasses.hover);
+  };
+
+  this.onLeave = function () {
+    this.classList.remove(iClasses.hover);
+  };
+
+  this.setUID = function (item) {
+    const uid = Math.floor(Math.random() * Date.now());
+
+    item.uid = uid;
+  };
 }
 // ####################### END CAROUSEL #######@@##################
-
-function onEnter() {
-  this.classList.add(itemClasses.hover);
-}
-
-function onLeave() {
-  this.classList.remove(itemClasses.hover);
-}
-
-const setNewSelected = (target, other, el) => {
-  const otherWrapper = document.getElementsByClassName(other.wrapper);
-  const targetSelected = document.getElementsByClassName(target.selected);
-  const otherSelected = document.getElementsByClassName(other.selected);
-
-  const className = el.className;
-
-  if (className.includes(target.base) && !className.includes(target.selected)) {
-    const itemChildren = otherWrapper[0].childNodes;
-
-    targetSelected[0].classList.remove(target.selected);
-
-    el.classList.add(target.selected);
-
-    itemChildren.forEach(function (child) {
-      if (child.uid === el.uid) {
-        otherSelected[0].classList.remove(other.selected);
-        child.classList.add(other.selected);
-      }
-    });
-  }
-};
-
-function getUID(item) {
-  return (item.uid = Math.floor(Math.random() * Date.now()));
-}
