@@ -140,6 +140,20 @@ function Carousel(lClasses, iClasses) {
         el.innerHTML = item.text;
       }
 
+      if (item.src && item.element === "img") {
+        if ("string" != typeof item.src)
+          return console.warn("Please ensure image src is a string");
+
+        el.src = item.src;
+        el.alt = item.alt || "image caption";
+      }
+
+      if (item.element === "a") {
+        el.href = item.href || "#";
+        el.target = "_blank";
+        el.innerHTML = item.text;
+      }
+
       destEl.appendChild(el);
     }, this);
 

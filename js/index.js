@@ -187,7 +187,7 @@ const projects = [
       {
         element: "div",
         class: "carousel-item-header",
-        style: "background-color: #c86060",
+        style: "background-color: #394757",
         children: [{ element: "h3", text: "Video Editor" }],
       },
       {
@@ -195,20 +195,35 @@ const projects = [
         class: "carousel-item-body",
         children: [
           {
-            element: "p",
-            text: `
-            At the moment I am using my sparetime<br>
-            developing a web application video editor<br>
-            for fun.<br>
-            Build with React,TypeScript and Redux.<br>
-            <br>
-            This app will also feature more complex functionality<br>
-            in the near future.<br>
-            `,
+            element: "div",
+            class: "project-item-text",
+            children: [
+              {
+                element: "p",
+                class: "remove-margin",
+                text: `
+                At the moment I am using my sparetime<br>
+                developing a web application video editor<br>
+                for fun.<br>
+                Build with React,TypeScript and Redux.<br>
+                <br>
+                This app will also feature more complex functionality<br>
+                in the near future.<br>
+                `,
+              },
+              {
+                element: "a",
+                class: "project-item-link",
+                text: "Go to Application",
+                href: "https://johangjensen.github.io/video_editor/",
+              },
+            ],
           },
           {
-            element: "a",
-            href: "#",
+            element: "img",
+            class: "carousel-item-image",
+            src: "./images/beer02.jpg",
+            alt: "beer site",
           },
         ],
       },
@@ -220,7 +235,7 @@ const projects = [
       {
         element: "div",
         class: "carousel-item-header",
-        style: "background-color: #c86060",
+        style: "background-color: #394757",
         children: [{ element: "h3", text: "Beer Site" }],
       },
       {
@@ -228,18 +243,37 @@ const projects = [
         class: "carousel-item-body",
         children: [
           {
-            element: "p",
-            text: `
-            During the quarantine I found a passion<br>
-            for beer brewing.<br>
-            Therefore I have built a website<br>
-            dedicated to this hobby.<br>
-            <br>
-            The website is server-side rendered using NodeJs.<br>
-            It is hosted on Heroku and is deployed as a docker container.<br>
-            <br>
-            As my portfolio of homebrew grows, so will this website.<br>
-            `,
+            element: "div",
+            class: "project-item-text",
+            children: [
+              {
+                element: "p",
+                class: "remove-margin",
+                text: `
+                During the quarantine I found a passion<br>
+                for beer brewing.<br>
+                Therefore I have built a website<br>
+                dedicated to this hobby.<br>
+                <br>
+                The website is server-side rendered using NodeJs.<br>
+                It is hosted on Heroku and is deployed as a docker container.<br>
+                <br>
+                As my portfolio of homebrew grows, so will this website.<br>
+                `,
+              },
+              {
+                element: "a",
+                class: "project-item-link",
+                text: "Go to Application",
+                href: "https://beer-site-container.herokuapp.com/",
+              },
+            ],
+          },
+          {
+            element: "img",
+            class: "carousel-item-image",
+            src: "./images/beer02.jpg",
+            alt: "beer site",
           },
         ],
       },
@@ -251,7 +285,7 @@ const projects = [
       {
         element: "div",
         class: "carousel-item-header",
-        style: "background-color: #c86060",
+        style: "background-color: #394757",
         children: [{ element: "h3", text: "EasyList" }],
       },
       {
@@ -259,14 +293,33 @@ const projects = [
         class: "carousel-item-body",
         children: [
           {
-            element: "p",
-            text: `
-            A simple todo application built<br>
-            for personal use.<br>
-            The app itself was made with the intent of<br>
-            understanding Xamarin Forms(mobile .net SDK)<br>
-            and C# in general better.<br>
-            `,
+            element: "div",
+            class: "project-item-text",
+            children: [
+              {
+                element: "p",
+                class: "remove-margin",
+                text: `
+                A simple todo application built<br>
+                for personal use.<br>
+                The app itself was made with the intent of<br>
+                understanding Xamarin Forms(mobile .net SDK)<br>
+                and C# in general better.<br>
+                `,
+              },
+              {
+                element: "a",
+                class: "project-item-link",
+                text: "Go to Repository",
+                href: "https://github.com/JohanGJensen/EasyList",
+              },
+            ],
+          },
+          {
+            element: "img",
+            class: "carousel-item-image",
+            src: "./images/beer02.jpg",
+            alt: "beer site",
           },
         ],
       },
@@ -278,7 +331,7 @@ const projects = [
       {
         element: "div",
         class: "carousel-item-header",
-        style: "background-color: #c86060",
+        style: "background-color: #394757",
         children: [{ element: "h3", text: "EasyList API" }],
       },
       {
@@ -286,14 +339,33 @@ const projects = [
         class: "carousel-item-body",
         children: [
           {
-            element: "p",
-            text: `
-            REST API I built to communicate<br>
-            with my EasyList application and database.<br>
-            <br>
-            This application uses NodeJs with Express.<br>
-            The Database in MongoDB.<br>
-            `,
+            element: "div",
+            class: "project-item-text",
+            children: [
+              {
+                element: "p",
+                class: "remove-margin",
+                text: `
+                REST API I built to communicate<br>
+                with my EasyList application and database.<br>
+                <br>
+                This application uses NodeJs with Express.<br>
+                The Database in MongoDB.<br>
+                `,
+              },
+              {
+                element: "a",
+                class: "project-item-link",
+                text: "Go to Repository",
+                href: "https://github.com/JohanGJensen/EasyList_RESTAPI",
+              },
+            ],
+          },
+          {
+            element: "img",
+            class: "carousel-item-image",
+            src: "./images/beer02.jpg",
+            alt: "beer site",
           },
         ],
       },
@@ -313,7 +385,7 @@ let projectListClasses = {
 
 let projectItemClasses = {
   wrapper: "carousel-item-project",
-  selected: "carousel-item-selected",
+  selected: "project-item-selected",
   base: "carousel-item",
   hover: "carousel-project-item-hover",
 };
@@ -328,20 +400,20 @@ projectCarousel.addPositionListeners();
 const skillList = document.getElementsByClassName("carousel-list-know");
 const skillItem = document.getElementsByClassName("carousel-item-know");
 
-let knoskillListClasses = {
+let skillListClasses = {
   wrapper: "carousel-list-know",
   selected: "carousel-list-selected",
   base: "carousel-list",
   hover: "carousel-list-hover",
 };
-let knoskillItemClasses = {
+let skillItemClasses = {
   wrapper: "carousel-item-know",
   selected: "carousel-item-selected",
   base: "carousel-item",
   hover: "carousel-item-hover",
 };
 
-const knowCarousel = new Carousel(knoskillListClasses, knoskillItemClasses);
+const knowCarousel = new Carousel(skillListClasses, skillItemClasses);
 knowCarousel.setListAndItems(skillList, skillItem, skills);
 knowCarousel.setPositionStyle("margin", 20);
 
