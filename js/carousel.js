@@ -3,9 +3,19 @@ function Carousel(lClasses, iClasses) {
   this.listSelectedRef = null;
   this.itemSelectedRef = null;
 
+  this.listWrapper = null;
+  this.itemWrapper = null;
+
+  this.positionStyle = {
+    margin: 100,
+  };
+
   this.setListAndItems = function (listDest, itemDest, items) {
     this.setMenu(listDest, items);
     this.setItems(itemDest, items);
+
+    this.listWrapper = listDest;
+    this.itemWrapper = itemDest;
   };
 
   // sets event listeners on each item in array
@@ -244,6 +254,74 @@ function Carousel(lClasses, iClasses) {
     const uid = Math.floor(Math.random() * Date.now());
 
     item.uid = uid;
+  };
+
+  this.getIndex = () => {
+    let idx = 0;
+
+    for (let i = 0; this.itemWrapper[0].children.length > i; i++) {
+      if (
+        this.itemWrapper[0].children[i].className?.includes(iClasses.selected)
+      )
+        idx = i;
+    }
+
+    return idx;
+  };
+
+  this.setCarouselItemsPosition = () => {
+    let wrapperWidth = this.itemWrapper[0].clientWidth;
+    let itemWidth;
+    let current = false;
+    let margin = this.positionStyle.margin;
+    let placement = this.itemSelectedRef.clientWidth / 2;
+    let idx = this.getIndex() || 0;
+
+    this.itemWrapper[0].childNodes.forEach((item) => {
+      if (!item.className?.includes(iClasses.base)) return;
+
+      itemWidth = item.clientWidth;
+
+      if (item.className?.includes(iClasses.selected)) {
+        current = true;
+
+        item.style.left = wrapperWidth / 2 - itemWidth / 2 + "px";
+
+        return;
+      }
+
+      if (current) {
+        item.style.left = wrapperWidth / 2 + margin + placement + "px";
+
+        placement += itemWidth + margin;
+      } else {
+        item.style.left =
+          wrapperWidth / 2 - (itemWidth + margin) * idx - placement + "px";
+
+        idx--;
+      }
+    });
+  };
+
+  this.setPositionStyle = (prop, value) => {
+    if (!prop || !value) return;
+
+    this.positionStyle[prop] = value;
+  };
+
+  this.addPositionListeners = () => {
+    window.addEventListener("resize", this.setCarouselItemsPosition);
+
+    this.itemWrapper[0].childNodes.forEach((item) => {
+      if (!item.className?.includes(iClasses.base)) return;
+
+      item.addEventListener("click", this.setCarouselItemsPosition);
+    });
+    this.listWrapper[0].childNodes.forEach((item) => {
+      if (!item.className?.includes(lClasses.base)) return;
+
+      item.addEventListener("click", this.setCarouselItemsPosition);
+    });
   };
 }
 // ####################### END CAROUSEL #######@@##################
