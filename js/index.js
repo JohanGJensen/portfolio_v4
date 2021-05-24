@@ -187,7 +187,7 @@ const projects = [
       {
         element: "div",
         class: "carousel-item-header",
-        style: "background-color: #F9DD79",
+        style: "background-color: #c86060",
         children: [{ element: "h3", text: "Video Editor" }],
       },
       {
@@ -196,15 +196,15 @@ const projects = [
         children: [
           {
             element: "p",
-            text: `Javascript is my primary developer skill,<br>
-                    and the language which I have built my<br>
-                    toolset around.<br>
-                    I work regularly with es5 AND above.<br><br>
-                    For my current job, the features I am building<br>
-                    all rely on the JavaScript Canvas API.<br><br>
-                    I have been programming with JS<br>
-                    for roughly 1.5 years now.<br>
-                `,
+            text: `
+            At the moment I am using my sparetime<br>
+            developing a web application video editor<br>
+            for fun.<br>
+            Build with React,TypeScript and Redux.<br>
+            <br>
+            This app will also feature more complex functionality<br>
+            in the near future.<br>
+            `,
           },
           {
             element: "a",
@@ -220,7 +220,7 @@ const projects = [
       {
         element: "div",
         class: "carousel-item-header",
-        style: "background-color: #6189C6",
+        style: "background-color: #c86060",
         children: [{ element: "h3", text: "Beer Site" }],
       },
       {
@@ -229,14 +229,17 @@ const projects = [
         children: [
           {
             element: "p",
-            text: `I was introduced to React right around<br>
-                    the time where class extended components<br>
-                    were getting replaced with a new feature<br>
-                    known as “hooks”.<br><br>
-                    This means I have been taught<br>
-                    to use classes, but worked<br>
-                    in a professional setting with hooks.<br>
-                `,
+            text: `
+            During the quarantine I found a passion<br>
+            for beer brewing.<br>
+            Therefore I have built a website<br>
+            dedicated to this hobby.<br>
+            <br>
+            The website is server-side rendered using NodeJs.<br>
+            It is hosted on Heroku and is deployed as a docker container.<br>
+            <br>
+            As my portfolio of homebrew grows, so will this website.<br>
+            `,
           },
         ],
       },
@@ -248,7 +251,7 @@ const projects = [
       {
         element: "div",
         class: "carousel-item-header",
-        style: "background-color: #549F64",
+        style: "background-color: #c86060",
         children: [{ element: "h3", text: "EasyList" }],
       },
       {
@@ -257,13 +260,13 @@ const projects = [
         children: [
           {
             element: "p",
-            text: `This framework has been my bread and butter<br>
-                    for a full year now. At my current job I work<br>
-                    on an application that is built from the ground up<br>
-                    with Sencha (2.0.0).<br><br>
-                    My role is not maintenance, but building<br>
-                    features for the application.<br>
-                `,
+            text: `
+            A simple todo application built<br>
+            for personal use.<br>
+            The app itself was made with the intent of<br>
+            understanding Xamarin Forms(mobile .net SDK)<br>
+            and C# in general better.<br>
+            `,
           },
         ],
       },
@@ -275,7 +278,7 @@ const projects = [
       {
         element: "div",
         class: "carousel-item-header",
-        style: "background-color: #294E80",
+        style: "background-color: #c86060",
         children: [{ element: "h3", text: "EasyList API" }],
       },
       {
@@ -285,12 +288,12 @@ const projects = [
           {
             element: "p",
             text: `
-                    React and TypeScript go<br>
-                    almost 1:1 hand in hand.<br><br>
-                    There is a good reason why so many require it.<br>
-                    The type checking adds a layer of app stability<br>
-                    VanillaJS simply does not have.<br>
-                `,
+            REST API I built to communicate<br>
+            with my EasyList application and database.<br>
+            <br>
+            This application uses NodeJs with Express.<br>
+            The Database in MongoDB.<br>
+            `,
           },
         ],
       },
@@ -340,6 +343,7 @@ let knoskillItemClasses = {
 
 const knowCarousel = new Carousel(knoskillListClasses, knoskillItemClasses);
 knowCarousel.setListAndItems(skillList, skillItem, skills);
+knowCarousel.setPositionStyle("margin", 20);
 
 knowCarousel.setCarouselItemsPosition();
 knowCarousel.addPositionListeners();
