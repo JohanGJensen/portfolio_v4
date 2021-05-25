@@ -222,8 +222,8 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./images/beer02.jpg",
-            alt: "beer site",
+            src: "./images/video_editor.jpg",
+            alt: "video editor",
           },
         ],
       },
@@ -272,7 +272,7 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./images/beer02.jpg",
+            src: "./images/beersite.jpg",
             alt: "beer site",
           },
         ],
@@ -318,8 +318,8 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./images/beer02.jpg",
-            alt: "beer site",
+            src: "./images/easylist_phone.jpg",
+            alt: "easylist",
           },
         ],
       },
@@ -364,8 +364,8 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./images/beer02.jpg",
-            alt: "beer site",
+            src: "./images/easylist_api.png",
+            alt: "easylist api",
           },
         ],
       },
