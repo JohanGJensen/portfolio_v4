@@ -209,6 +209,8 @@ const projects = [
                 <br>
                 This app will also feature more complex functionality<br>
                 in the near future.<br>
+                <br>
+                *WORK IN PROGRESS*<br>
                 `,
               },
               {
@@ -235,7 +237,7 @@ const projects = [
       {
         element: "div",
         class: "carousel-item-header",
-        style: "background-color: #394757",
+        style: "background-color: #f6b468",
         children: [{ element: "h3", text: "Beer Site" }],
       },
       {
@@ -259,6 +261,8 @@ const projects = [
                 It is hosted on Heroku and is deployed as a docker container.<br>
                 <br>
                 As my portfolio of homebrew grows, so will this website.<br>
+                <br>
+                *WORK IN PROGRESS*<br>
                 `,
               },
               {
@@ -285,7 +289,7 @@ const projects = [
       {
         element: "div",
         class: "carousel-item-header",
-        style: "background-color: #394757",
+        style: "background-color: #2196F3",
         children: [{ element: "h3", text: "EasyList" }],
       },
       {
@@ -331,7 +335,7 @@ const projects = [
       {
         element: "div",
         class: "carousel-item-header",
-        style: "background-color: #394757",
+        style: "background-color: #68a063",
         children: [{ element: "h3", text: "EasyList API" }],
       },
       {
