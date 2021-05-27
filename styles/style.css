@@ -3,14 +3,19 @@ html body {
   padding: 0;
   font-family: "nobile";
 }
+body {
+  overflow-x: hidden;
+  position: relative;
+}
 
 #site-progress {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  /* -webkit-appearance: none; */
+  -webkit-appearance: none;
   appearance: none;
-  /* -moz-appearance: none; */
+  -moz-appearance: none;
   z-index: 99;
 
   margin: 0;
@@ -194,6 +199,10 @@ footer .footer-container .footer-list-item {
 }
 
 @media screen and (min-width: 736px) {
+  #site-progress {
+    display: block;
+  }
+
   .container {
     margin: 0;
     justify-content: center;
