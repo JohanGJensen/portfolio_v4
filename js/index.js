@@ -262,7 +262,6 @@ const projects = [
                 <br>
                 As my portfolio of homebrew grows, so will this website.<br>
                 <br>
-                *WORK IN PROGRESS*<br>
                 `,
               },
               {
@@ -276,7 +275,7 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./images/beersite.jpg",
+            src: "./images/beersite.png",
             alt: "beer site",
           },
         ],
