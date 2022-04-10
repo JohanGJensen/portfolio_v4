@@ -1,8 +1,12 @@
+@import "carousel.css";
+@import "fonts.css";
+
 html body {
   margin: 0;
   padding: 0;
   font-family: "nobile";
 }
+
 body {
   overflow-x: hidden;
   position: relative;
@@ -28,12 +32,15 @@ body {
   height: 5px;
   width: 100%;
 }
+
 #site-progress::-moz-progress-bar {
   background-color: #c86060;
 }
+
 #site-progress::-moz-progress-value {
   background-color: #c86060;
 }
+
 /* #site-progress::-webkit-progress-bar {
     background-color: #C86060;
 } */
@@ -144,7 +151,7 @@ a {
   font-size: 0.9em;
 }
 
-.carousel-item-body > P {
+.carousel-item-body>P {
   margin: 0;
   padding: 20px;
   font-size: 0.8em;
@@ -154,7 +161,7 @@ a {
   background-color: none;
 }
 
-.carousel-list > p {
+.carousel-list>p {
   text-align: center;
 }
 
@@ -170,6 +177,7 @@ a {
   background-color: #c86060;
   color: #ffffff;
 }
+
 .btn:hover {
   background-color: #ffffff;
   color: #394757;
@@ -257,7 +265,7 @@ footer .footer-container .footer-list-item {
     width: auto;
   }
 
-  .carousel-item-body > P {
+  .carousel-item-body>P {
     font-size: 1em;
   }
 
