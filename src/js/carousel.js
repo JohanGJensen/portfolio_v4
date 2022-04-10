@@ -1,5 +1,5 @@
 // ###################### START CAROUSEL ##########################
-function Carousel(lClasses, iClasses) {
+module.exports = function Carousel(lClasses, iClasses) {
   this.listSelectedRef = null;
   this.itemSelectedRef = null;
 

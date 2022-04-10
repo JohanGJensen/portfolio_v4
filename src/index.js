@@ -1,12 +1,18 @@
+import './styles/style.css';
+import './styles/fonts.css';
+import './styles/carousel.css';
+
+import Carousel from './js/carousel';
+
 const progress = document.getElementById("site-progress");
-const body = document.getElementsByTagName("body");
+const body = document.getElementById("site-body");
 
 progress.setAttribute("value", window.scrollY);
 
 const siteProgress = () => {
-  let totalHeight = body[0].clientHeight - this.innerHeight;
+  let totalHeight = body.clientHeight - window.innerHeight;
 
-  progress.setAttribute("value", (this.scrollY / totalHeight) * 100);
+  progress.setAttribute("value", (window.scrollY / totalHeight) * 100);
 };
 
 window.addEventListener("scroll", siteProgress);
@@ -224,7 +230,7 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./src/images/video_editor.jpg",
+            src: "./images/video_editor.jpg",
             alt: "video editor",
           },
         ],
@@ -275,7 +281,7 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./src/images/beersite.png",
+            src: "./images/beersite.png",
             alt: "beer site",
           },
         ],
@@ -321,7 +327,7 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./src/images/easylist_phone.jpg",
+            src: "./images/easylist_phone.jpg",
             alt: "easylist",
           },
         ],
@@ -367,7 +373,7 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./src/images/easylist_api.png",
+            src: "./images/easylist_api.png",
             alt: "easylist api",
           },
         ],
