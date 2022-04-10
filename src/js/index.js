@@ -224,7 +224,7 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./images/video_editor.jpg",
+            src: "./src/images/video_editor.jpg",
             alt: "video editor",
           },
         ],
@@ -275,7 +275,7 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./images/beersite.png",
+            src: "./src/images/beersite.png",
             alt: "beer site",
           },
         ],
@@ -321,7 +321,7 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./images/easylist_phone.jpg",
+            src: "./src/images/easylist_phone.jpg",
             alt: "easylist",
           },
         ],
@@ -367,7 +367,7 @@ const projects = [
           {
             element: "img",
             class: "carousel-item-image",
-            src: "./images/easylist_api.png",
+            src: "./src/images/easylist_api.png",
             alt: "easylist api",
           },
         ],

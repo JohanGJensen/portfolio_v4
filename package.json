@@ -1,0 +1,26 @@
+{
+  "name": "portfolio_v4",
+  "version": "1.0.0",
+  "description": "latest iteration of my personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohanGJensen/portfolio_v4.git"
+  },
+  "keywords": [],
+  "author": "Johan Glud Jensen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohanGJensen/portfolio_v4/issues"
+  },
+  "homepage": "https://github.com/JohanGJensen/portfolio_v4#readme",
+  "devDependencies": {
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1"
+  }
+}
