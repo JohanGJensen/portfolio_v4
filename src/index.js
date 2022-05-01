@@ -154,86 +154,9 @@ const skills = [
       },
     ],
   },
-  {
-    li: "Python",
-    children: [
-      {
-        element: "div",
-        class: "carousel-item-header",
-        style: "background-color: #FFE66E",
-        children: [{ element: "h3", text: "Python" }],
-      },
-      {
-        element: "div",
-        class: "carousel-item-body",
-        children: [
-          {
-            element: "p",
-            text: `
-                    Python I have used in combination with projects<br>
-                    at my current job.<br><br>
-                    The application I work on utilizes Docker-Compose to<br>
-                    host a cluster of workers that handles specific tasks<br>
-                    and requests sent by the application itself.
-                `,
-          },
-        ],
-      },
-    ],
-  },
 ];
 
 const projects = [
-  // {
-  //   li: "Video Editor",
-  //   children: [
-  //     {
-  //       element: "div",
-  //       class: "carousel-item-header",
-  //       style: "background-color: #394757",
-  //       children: [{ element: "h3", text: "Video Editor" }],
-  //     },
-  //     {
-  //       element: "div",
-  //       class: "carousel-item-body",
-  //       children: [
-  //         {
-  //           element: "div",
-  //           class: "project-item-text",
-  //           children: [
-  //             {
-  //               element: "p",
-  //               class: "remove-margin",
-  //               text: `
-  //               At the moment I am using my sparetime<br>
-  //               developing a web application video editor<br>
-  //               for fun.<br>
-  //               Build with React,TypeScript and Redux.<br>
-  //               <br>
-  //               This app will also feature more complex functionality<br>
-  //               in the near future.<br>
-  //               <br>
-  //               *WORK IN PROGRESS*<br>
-  //               `,
-  //             },
-  //             {
-  //               element: "a",
-  //               class: "project-item-link",
-  //               text: "Go to Application",
-  //               href: "https://johangjensen.github.io/video_editor/",
-  //             },
-  //           ],
-  //         },
-  //         {
-  //           element: "img",
-  //           class: "carousel-item-image",
-  //           src: "./images/video_editor.jpg",
-  //           alt: "video editor",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
   {
     li: "Beer Site",
     children: [

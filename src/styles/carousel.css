@@ -22,6 +22,10 @@
   align-items: center;
 
   width: 90%;
+
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
 }
 
 .remove-margin {
@@ -43,6 +47,8 @@
   padding: 0;
 
   transition: 0.1s left ease;
+
+  border-bottom: 1px solid #333;
 }
 
 .carousel-item:hover,
@@ -105,6 +111,7 @@
     align-items: center;
 
     width: 80%;
+    gap: 3em;
   }
 
   .carousel-item-wrapper,
@@ -119,6 +126,8 @@
     overflow-y: hidden;
     overflow-x: hidden;
     white-space: nowrap;
+
+    border: none;
   }
 
   .carousel-item-wrapper {
@@ -133,7 +142,7 @@
     cursor: pointer;
     margin: 0 0 1px 0;
     color: #b3b4b6;
-    width: 100%;
+    width: auto;
     height: auto;
   }
 
@@ -160,6 +169,8 @@
 
     white-space: normal;
     transition: 0.1s left ease;
+
+    border: none;
   }
 
   /* .carousel-item-image {
@@ -174,6 +185,8 @@
 
     width: 500px;
     height: 400px;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
 
   .project-item-selected {
@@ -185,6 +198,8 @@
     max-width: 1200px;
     height: 750px;
     overflow: hidden;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
 
   .project-item-selected .project-item-text {
