@@ -1438,6 +1438,53 @@ const projects = [
       },
     ],
   },
+  {
+    li: "Flaskeposten",
+    children: [
+      {
+        element: "div",
+        class: "carousel-item-header",
+        style: "background-color: #4F46E5",
+        children: [{ element: "h3", text: "Flaskeposten" }],
+      },
+      {
+        element: "div",
+        class: "carousel-item-body",
+        children: [
+          {
+            element: "div",
+            class: "project-item-text",
+            children: [
+              {
+                element: "p",
+                class: "remove-margin",
+                text: `
+                A small chat app written<br>
+                with NodeJS & React.<br><br>
+                This project uses:<br>
+                - Websockets<br>
+                - Tailwind css<br>
+                - firebase database<br>
+                `,
+              },
+              {
+                element: "a",
+                class: "project-item-link",
+                text: "Go to Repository",
+                href: "https://github.com/JohanGJensen/flaskepost",
+              },
+            ],
+          },
+          {
+            element: "img",
+            class: "carousel-item-image",
+            src: "./images/flaskeposten.jpg",
+            alt: "easylist",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 const projectList = document.getElementsByClassName("carousel-list-project");
