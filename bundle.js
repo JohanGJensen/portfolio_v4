@@ -1404,16 +1404,27 @@ const projects = [
                 text: `
                 A simple todo application built<br>
                 for personal use.<br>
-                The app itself was made with the intent of<br>
-                understanding Xamarin Forms(mobile .net SDK)<br>
-                and C# in general better.<br>
-                `,
+                The app itself is made with React<br>
+                and Mantine UI library.`,
               },
               {
                 element: "a",
                 class: "project-item-link",
                 text: "Go to Repository",
-                href: "https://github.com/JohanGJensen/EasyList",
+                href: "https://github.com/JohanGJensen/easylist-ui-pwa",
+              },
+              {
+                element: "p",
+                class: "remove-margin",
+                text: `
+                Additionally, the api was built<br>
+                using nodeJs, Express and MongoDB.<br>`,
+              },
+              {
+                element: "a",
+                class: "project-item-link",
+                text: "Go to REST API Repository",
+                href: "https://github.com/JohanGJensen/EasyList_RESTAPI",
               },
             ],
           },
@@ -1422,52 +1433,6 @@ const projects = [
             class: "carousel-item-image",
             src: "./images/easylist_phone.jpg",
             alt: "easylist",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    li: "EasyList API",
-    children: [
-      {
-        element: "div",
-        class: "carousel-item-header",
-        style: "background-color: #68a063",
-        children: [{ element: "h3", text: "EasyList API" }],
-      },
-      {
-        element: "div",
-        class: "carousel-item-body",
-        children: [
-          {
-            element: "div",
-            class: "project-item-text",
-            children: [
-              {
-                element: "p",
-                class: "remove-margin",
-                text: `
-                REST API I built to communicate<br>
-                with my EasyList application and database.<br>
-                <br>
-                This application uses NodeJs with Express.<br>
-                The Database in MongoDB.<br>
-                `,
-              },
-              {
-                element: "a",
-                class: "project-item-link",
-                text: "Go to Repository",
-                href: "https://github.com/JohanGJensen/EasyList_RESTAPI",
-              },
-            ],
-          },
-          {
-            element: "img",
-            class: "carousel-item-image",
-            src: "./images/easylist_api.png",
-            alt: "easylist api",
           },
         ],
       },
