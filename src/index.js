@@ -1,5 +1,5 @@
 import './styles/style.css';
-import Carousel from './js/carousel';
+import Carousel from '@johang/carouseljs';
 
 const progress = document.getElementById("site-progress");
 const body = document.getElementById("site-body");
