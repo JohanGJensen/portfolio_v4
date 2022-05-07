@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "../packages/carouselJS/index.js":
-/*!***************************************!*\
-  !*** ../packages/carouselJS/index.js ***!
-  \***************************************/
+/***/ "./node_modules/@johang/carouseljs/index.js":
+/*!**************************************************!*\
+  !*** ./node_modules/@johang/carouseljs/index.js ***!
+  \**************************************************/
 /***/ ((module) => {
 
 // ###################### START CAROUSEL ##########################
@@ -1169,7 +1169,7 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
-/* harmony import */ var _johang_carouseljs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @johang/carouseljs */ "../packages/carouselJS/index.js");
+/* harmony import */ var _johang_carouseljs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @johang/carouseljs */ "./node_modules/@johang/carouseljs/index.js");
 /* harmony import */ var _johang_carouseljs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_johang_carouseljs__WEBPACK_IMPORTED_MODULE_1__);
 
 
