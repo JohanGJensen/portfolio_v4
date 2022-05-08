@@ -8,23 +8,38 @@
 /***/ ((module) => {
 
 // ###################### START CAROUSEL ##########################
-module.exports = function Carousel(lClasses, iClasses) {
+function Carousel(classes, items) {
   this.listSelectedRef = null;
   this.itemSelectedRef = null;
 
-  this.listWrapper = null;
+  this.menuWrapper = null;
   this.itemWrapper = null;
 
   this.positionStyle = {
-    margin: 100,
+    margin: 0,
   };
 
-  this.setListAndItems = function (listDest, itemDest, items) {
+  this.init = function () {
+    const { menu, item } = classes;
+
+    if (menu) {
+      this.menuWrapper = document.getElementsByClassName(menu.wrapper);
+      this.setMenu(this.menuWrapper, items);
+    }
+
+    if (item) {
+      this.itemWrapper = document.getElementsByClassName(item.wrapper);
+      this.setItems(this.itemWrapper, items);
+
+      this.setCarouselItemsPosition();
+      this.addPositionListeners();
+    }
+
+  };
+
+  this.setListAndItems = function (listDest, itemDest) {
     this.setMenu(listDest, items);
     this.setItems(itemDest, items);
-
-    this.listWrapper = listDest;
-    this.itemWrapper = itemDest;
   };
 
   // sets event listeners on each item in array
@@ -37,7 +52,7 @@ module.exports = function Carousel(lClasses, iClasses) {
       return console.warn("Warning Element provided does not have a nodelist!");
 
     destEl.forEach((el) => {
-      if (!el.className || el.className.includes(iClasses.base)) {
+      if (!el.className || el.className.includes(classes.item.base)) {
         const { setNewSelected } = (scope = this);
 
         el.addEventListener("mouseenter", this.onEnter, true);
@@ -62,8 +77,10 @@ module.exports = function Carousel(lClasses, iClasses) {
     if (!(destEl instanceof NodeList))
       return console.warn("Warning Element provided does not have a nodelist!");
 
+    const { menu } = classes;
+
     destEl.forEach((el) => {
-      if (!el.className || el.className.includes(lClasses.base)) {
+      if (!el.className || el.className.includes(menu.base)) {
         const { setNewSelected } = (scope = this);
 
         el.addEventListener(
@@ -94,7 +111,7 @@ module.exports = function Carousel(lClasses, iClasses) {
         "Warning: please provide setItems with a valid destination element!"
       );
 
-    const { selected, base } = iClasses;
+    const { selected, base } = classes.item;
     let selectedExists;
 
     // checks destination element if there already is a selected class on one of the elements
@@ -166,6 +183,8 @@ module.exports = function Carousel(lClasses, iClasses) {
       destEl.appendChild(el);
     }, this);
 
+    this.itemWrapper = destEl;
+
     if (!parent) this.setItemListeners(destEl);
   };
 
@@ -184,7 +203,7 @@ module.exports = function Carousel(lClasses, iClasses) {
         "Warning: please provide setMenu with a valid destination element!"
       );
 
-    const { selected, base } = lClasses;
+    const { selected, base } = classes.menu;
     let selectedExists;
 
     // checks destination element if there already is a selected class on one of the elements
@@ -215,62 +234,75 @@ module.exports = function Carousel(lClasses, iClasses) {
       destEl.appendChild(el);
     }, this);
 
+    this.menuWrapper = destEl;
     this.setListListeners(destEl);
   };
 
   this.setSelectedRefs = (action, payload) => {
-    if (lClasses.base === action) {
+    const { menu, item } = classes;
+
+    if (menu.base === action) {
       this.listSelectedRef = payload;
     }
-    if (iClasses.base === action) {
+    if (item.base === action) {
       this.itemSelectedRef = payload;
     }
   };
 
   this.setNewSelected = (type, el) => {
+    const { menu, item } = classes;
+    const className = el.className;
+
     let target;
     let other;
     let targetSelect;
     let otherSelect;
 
     if (type === "item") {
-      target = iClasses;
-      other = lClasses;
+      target = item;
+      other = menu;
       targetSelect = this.itemSelectedRef;
       otherSelect = this.listSelectedRef;
     }
     if (type === "list") {
-      target = lClasses;
-      other = iClasses;
+      target = menu;
+      other = item;
       targetSelect = this.listSelectedRef;
       otherSelect = this.itemSelectedRef;
     }
-    const otherWrapper = document.getElementsByClassName(other.wrapper);
-    const className = el.className;
 
-    if (className.includes(target.base) && !className.includes(targetSelect)) {
-      const itemChildren = otherWrapper[0].childNodes;
-
+    if (
+      className.includes(target.base) &&
+      !className.includes(targetSelect)
+    ) {
       targetSelect.classList.remove(target.selected);
       el.classList.add(target.selected);
       this.setSelectedRefs(target.base, el);
 
-      itemChildren.forEach(function (child) {
-        if (child.id === el.id) {
-          otherSelect.classList.remove(other.selected);
-          child.classList.add(other.selected);
-          this.setSelectedRefs(other.base, child);
-        }
-      }, this);
+      /**
+       * other refers to the opposite type of the carousel (item or menu)
+       */
+      if (other?.wrapper) {
+        const otherWrapper = document.getElementsByClassName(other.wrapper);
+        const itemChildren = otherWrapper[0].childNodes;
+
+        itemChildren.forEach(function (child) {
+          if (child.id === el.id) {
+            otherSelect.classList.remove(other.selected);
+            child.classList.add(other.selected);
+            this.setSelectedRefs(other.base, child);
+          }
+        }, this);
+      }
     }
   };
 
   this.onEnter = function () {
-    this.classList.add(iClasses.hover);
+    this.classList.add(classes.item.hover);
   };
 
   this.onLeave = function () {
-    this.classList.remove(iClasses.hover);
+    this.classList.remove(classes.item.hover);
   };
 
   this.setUID = function (item) {
@@ -282,9 +314,9 @@ module.exports = function Carousel(lClasses, iClasses) {
   this.getIndex = () => {
     let idx = 0;
 
-    for (let i = 0; this.itemWrapper[0].children.length > i; i++) {
+    for (let i = 0; this.itemWrapper.children.length > i; i++) {
       if (
-        this.itemWrapper[0].children[i].className?.includes(iClasses.selected)
+        this.itemWrapper.children[i].className?.includes(classes.item.selected)
       )
         idx = i;
     }
@@ -293,19 +325,19 @@ module.exports = function Carousel(lClasses, iClasses) {
   };
 
   this.setCarouselItemsPosition = () => {
-    let wrapperWidth = this.itemWrapper[0].clientWidth;
+    let wrapperWidth = this.itemWrapper.clientWidth;
     let itemWidth;
     let current = false;
     let margin = this.positionStyle.margin;
     let placement = this.itemSelectedRef.clientWidth / 2;
     let idx = this.getIndex() || 0;
 
-    this.itemWrapper[0].childNodes.forEach((item) => {
-      if (!item.className?.includes(iClasses.base)) return;
+    this.itemWrapper.childNodes.forEach((item) => {
+      if (!item.className?.includes(classes.item.base)) return;
 
       itemWidth = item.clientWidth;
 
-      if (item.className?.includes(iClasses.selected)) {
+      if (item.className?.includes(classes.item.selected)) {
         current = true;
 
         item.style.left = wrapperWidth / 2 - itemWidth / 2 + "px";
@@ -335,20 +367,27 @@ module.exports = function Carousel(lClasses, iClasses) {
   this.addPositionListeners = () => {
     window.addEventListener("resize", this.setCarouselItemsPosition);
 
-    this.itemWrapper[0].childNodes.forEach((item) => {
-      if (!item.className?.includes(iClasses.base)) return;
+    if (this.itemWrapper && this.itemWrapper) {
+      this.itemWrapper.childNodes.forEach((item) => {
+        if (!item.className?.includes(classes.item.base)) return;
 
-      item.addEventListener("click", this.setCarouselItemsPosition);
-    });
-    this.listWrapper[0].childNodes.forEach((item) => {
-      if (!item.className?.includes(lClasses.base)) return;
+        item.addEventListener("click", this.setCarouselItemsPosition);
+      });
+    }
 
-      item.addEventListener("click", this.setCarouselItemsPosition);
-    });
+
+    if (this.menuWrapper && this.menuWrapper) {
+      this.menuWrapper.childNodes.forEach((item) => {
+        if (!item.className?.includes(classes.menu.base)) return;
+
+        item.addEventListener("click", this.setCarouselItemsPosition);
+      });
+    }
   };
 }
 // ####################### END CAROUSEL #######@@##################
 
+module.exports = Carousel;
 
 /***/ }),
 
@@ -1487,52 +1526,43 @@ const projects = [
   },
 ];
 
-const projectList = document.getElementsByClassName("carousel-list-project");
-const projectItem = document.getElementsByClassName("carousel-item-project");
-
-let projectListClasses = {
-  wrapper: "carousel-list-project",
-  selected: "carousel-list-selected",
-  base: "carousel-list",
-  hover: "carousel-list-hover",
+const projectClasses = {
+  menu: {
+    wrapper: "carousel-list-project",
+    selected: "carousel-list-selected",
+    base: "carousel-list",
+    hover: "carousel-list-hover",
+  },
+  item: {
+    wrapper: "carousel-item-project",
+    selected: "project-item-selected",
+    base: "carousel-item",
+    hover: "carousel-project-item-hover",
+  }
 };
 
-let projectItemClasses = {
-  wrapper: "carousel-item-project",
-  selected: "project-item-selected",
-  base: "carousel-item",
-  hover: "carousel-project-item-hover",
-};
-
-const projectCarousel = new (_johang_carouseljs__WEBPACK_IMPORTED_MODULE_1___default())(projectListClasses, projectItemClasses);
-projectCarousel.setListAndItems(projectList, projectItem, projects);
+const projectCarousel = new (_johang_carouseljs__WEBPACK_IMPORTED_MODULE_1___default())(projectClasses, projects);
 projectCarousel.setPositionStyle("margin", 20);
+projectCarousel.init();
 
-projectCarousel.setCarouselItemsPosition();
-projectCarousel.addPositionListeners();
-
-const skillList = document.getElementsByClassName("carousel-list-know");
-const skillItem = document.getElementsByClassName("carousel-item-know");
-
-let skillListClasses = {
-  wrapper: "carousel-list-know",
-  selected: "carousel-list-selected",
-  base: "carousel-list",
-  hover: "carousel-list-hover",
-};
-let skillItemClasses = {
-  wrapper: "carousel-item-know",
-  selected: "carousel-item-selected",
-  base: "carousel-item",
-  hover: "carousel-item-hover",
+const skillClasses = {
+  menu: {
+    wrapper: "carousel-list-know",
+    selected: "carousel-list-selected",
+    base: "carousel-list",
+    hover: "carousel-list-hover",
+  },
+  item: {
+    wrapper: "carousel-item-know",
+    selected: "carousel-item-selected",
+    base: "carousel-item",
+    hover: "carousel-item-hover",
+  }
 };
 
-const knowCarousel = new (_johang_carouseljs__WEBPACK_IMPORTED_MODULE_1___default())(skillListClasses, skillItemClasses);
-knowCarousel.setListAndItems(skillList, skillItem, skills);
-knowCarousel.setPositionStyle("margin", 20);
-
-knowCarousel.setCarouselItemsPosition();
-knowCarousel.addPositionListeners();
+const skillCarousel = new (_johang_carouseljs__WEBPACK_IMPORTED_MODULE_1___default())(skillClasses, skills);
+skillCarousel.setPositionStyle("margin", 20);
+skillCarousel.init();
 
 })();
 
