@@ -19,9 +19,6 @@
     "url": "https://github.com/JohanGJensen/portfolio_v4/issues"
   },
   "homepage": "https://github.com/JohanGJensen/portfolio_v4",
-  "dependencies": {
-    "@johang/carouseljs": "^1.0.0"
-  },
   "devDependencies": {
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
@@ -31,5 +28,8 @@
     "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.8.1"
+  },
+  "dependencies": {
+    "@johang/carouseljs": "^1.0.2"
   }
 }

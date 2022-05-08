@@ -314,49 +314,40 @@ const projects = [
   },
 ];
 
-const projectList = document.getElementsByClassName("carousel-list-project");
-const projectItem = document.getElementsByClassName("carousel-item-project");
-
-let projectListClasses = {
-  wrapper: "carousel-list-project",
-  selected: "carousel-list-selected",
-  base: "carousel-list",
-  hover: "carousel-list-hover",
+const projectClasses = {
+  menu: {
+    wrapper: "carousel-list-project",
+    selected: "carousel-list-selected",
+    base: "carousel-list",
+    hover: "carousel-list-hover",
+  },
+  item: {
+    wrapper: "carousel-item-project",
+    selected: "project-item-selected",
+    base: "carousel-item",
+    hover: "carousel-project-item-hover",
+  }
 };
 
-let projectItemClasses = {
-  wrapper: "carousel-item-project",
-  selected: "project-item-selected",
-  base: "carousel-item",
-  hover: "carousel-project-item-hover",
-};
-
-const projectCarousel = new Carousel(projectListClasses, projectItemClasses);
-projectCarousel.setListAndItems(projectList, projectItem, projects);
+const projectCarousel = new Carousel(projectClasses, projects);
 projectCarousel.setPositionStyle("margin", 20);
+projectCarousel.init();
 
-projectCarousel.setCarouselItemsPosition();
-projectCarousel.addPositionListeners();
-
-const skillList = document.getElementsByClassName("carousel-list-know");
-const skillItem = document.getElementsByClassName("carousel-item-know");
-
-let skillListClasses = {
-  wrapper: "carousel-list-know",
-  selected: "carousel-list-selected",
-  base: "carousel-list",
-  hover: "carousel-list-hover",
-};
-let skillItemClasses = {
-  wrapper: "carousel-item-know",
-  selected: "carousel-item-selected",
-  base: "carousel-item",
-  hover: "carousel-item-hover",
+const skillClasses = {
+  menu: {
+    wrapper: "carousel-list-know",
+    selected: "carousel-list-selected",
+    base: "carousel-list",
+    hover: "carousel-list-hover",
+  },
+  item: {
+    wrapper: "carousel-item-know",
+    selected: "carousel-item-selected",
+    base: "carousel-item",
+    hover: "carousel-item-hover",
+  }
 };
 
-const knowCarousel = new Carousel(skillListClasses, skillItemClasses);
-knowCarousel.setListAndItems(skillList, skillItem, skills);
-knowCarousel.setPositionStyle("margin", 20);
-
-knowCarousel.setCarouselItemsPosition();
-knowCarousel.addPositionListeners();
+const skillCarousel = new Carousel(skillClasses, skills);
+skillCarousel.setPositionStyle("margin", 20);
+skillCarousel.init();
