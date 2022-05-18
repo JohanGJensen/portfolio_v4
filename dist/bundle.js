@@ -1228,35 +1228,6 @@ window.addEventListener("scroll", siteProgress);
 
 const skills = [
   {
-    li: "Javascript",
-    children: [
-      {
-        element: "div",
-        class: "carousel-item-header",
-        style: "background-color: #F9DD79",
-        children: [{ element: "h3", text: "Javascript" }],
-      },
-      {
-        element: "div",
-        class: "carousel-item-body",
-        children: [
-          {
-            element: "p",
-            text: `Javascript is my primary developer skill,<br>
-            and the language which I have built my<br>
-            toolset around.<br>
-            I work regularly with es5 AND above.<br><br>
-            For my current job, the features I am building<br>
-            all rely on the JavaScript Canvas API.<br><br>
-            I have been programming with JS<br>
-            for roughly 3 years now.<br>
-                `,
-          },
-        ],
-      },
-    ],
-  },
-  {
     li: "React",
     children: [
       {
@@ -1361,6 +1332,40 @@ const skills = [
             My role is not maintenance, but building<br>
             features for the application.<br>
                 `,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    li: "Angular",
+    children: [
+      {
+        element: "div",
+        class: "carousel-item-header",
+        style: "background-color: #dd1b16",
+        children: [{ element: "h3", text: "Angular" }],
+      },
+      {
+        element: "div",
+        class: "carousel-item-body",
+        style: "flex-direction: column;",
+        children: [
+          {
+            element: "p",
+            text: `Through my current job<br>
+            I have been working with Angular.<br>
+            While it is mostly maintenance, I have been<br>
+            making a few features for the application<br>
+            in Angular.<br><br>
+                `,
+          },
+          {
+            element: "a",
+            class: "project-item-link",
+            text: "See example project",
+            style: "padding-left: 20px;",
+            href: "https://johangjensen.github.io/cocktail_lookup_angular/",
           },
         ],
       },
