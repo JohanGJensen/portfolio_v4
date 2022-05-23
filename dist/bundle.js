@@ -411,7 +411,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".carousel-list-wrapper {\n  padding: 0;\n  margin: 0;\n  list-style: none;\n  text-decoration: none;\n\n  display: none;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  width: 90%;\n}\n\n.carousel-item-wrapper {\n  padding: 0;\n  margin: 0;\n\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  width: 90%;\n\n  border-top: 1px solid #333;\n  border-left: 1px solid #333;\n  border-right: 1px solid #333;\n}\n\n.remove-margin {\n  margin: 0;\n  padding: 10px 0;\n}\n\n.carousel-list {\n  cursor: pointer;\n  margin: 0 0 1px 0;\n  width: 100%;\n}\n\n.carousel-item {\n  cursor: pointer;\n  display: block;\n  width: 100%;\n  height: auto;\n  padding: 0;\n\n  transition: 0.1s left ease;\n\n  border-bottom: 1px solid #333;\n}\n\n.carousel-item:hover,\n.carousel-item:active,\n.carousel-item:focus {\n  background-color: #fdfcfc;\n}\n\n.carousel-item-selected,\n.project-item-selected {\n  display: block;\n}\n\n.project-item-selected>.carousel-item-body {\n  visibility: visible;\n  opacity: 1;\n  max-height: 1000px;\n\n  display: flex;\n  flex-direction: column;\n\n  transition: max-height 0.6s ease-in-out;\n  transition: opacity 0.1s ease-in-out;\n}\n\n.carousel-item-selected>.carousel-item-body {\n  visibility: visible;\n  opacity: 1;\n  max-height: 500px;\n  transition: max-height 0.6s ease-in-out;\n  transition: opacity 0.1s ease-in-out;\n}\n\n.carousel-item-header {\n  display: block;\n}\n\n.carousel-item-body {\n  visibility: hidden;\n  opacity: 0;\n  max-height: 0px;\n}\n\n.project-item-link {\n  color: #c86060;\n}\n\n.project-item-selected .carousel-item-body img {\n  max-height: 500px;\n  object-fit: contain;\n}\n\n@media screen and (min-width: 736px) {\n\n  .carousel-list-wrapper,\n  .carousel-list-project {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n\n    width: 80%;\n    gap: 3em;\n  }\n\n  .carousel-item-wrapper,\n  .carousel-item-project {\n    padding: 0;\n    margin: 0;\n\n    position: relative;\n    display: block;\n    width: 100%;\n\n    overflow-y: hidden;\n    overflow-x: hidden;\n    white-space: nowrap;\n\n    border: none;\n  }\n\n  .carousel-item-wrapper {\n    height: 500px;\n  }\n\n  .carousel-item-project {\n    height: 900px;\n  }\n\n  .carousel-list {\n    cursor: pointer;\n    margin: 0 0 1px 0;\n    color: #b3b4b6;\n    width: auto;\n    height: auto;\n  }\n\n  .carousel-list:hover,\n  .carousel-list:active,\n  .carousel-list:focus {\n    color: #394757;\n  }\n\n  .carousel-list-selected p {\n    color: #394757;\n  }\n\n  .carousel-item {\n    background-color: #fdfcfc;\n    position: absolute;\n    display: inline-block;\n    width: 300px;\n    height: 300px;\n    max-width: 500px;\n    /* max-height: 400px; */\n    padding: 0;\n    margin: 0 0px;\n\n    white-space: normal;\n    transition: 0.1s left ease;\n\n    border: none;\n  }\n\n  /* .carousel-item-image {\n    width: auto;\n    height: auto;\n  } */\n\n  .carousel-item-selected {\n    position: absolute;\n    display: inline-block;\n    z-index: 10;\n\n    width: 500px;\n    height: 400px;\n\n    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);\n  }\n\n  .project-item-selected {\n    position: absolute;\n    display: inline-block;\n    z-index: 10;\n\n    width: 90%;\n    max-width: 1200px;\n    height: 750px;\n    overflow: hidden;\n\n    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);\n  }\n\n  .project-item-selected .project-item-text {\n    width: 30%;\n    padding: 0 20px;\n  }\n\n  .project-item-selected .carousel-item-body img {\n    width: 70%;\n    height: auto;\n    max-height: 750px;\n  }\n\n  .carousel-item-selected>.carousel-item-header,\n  .project-item-selected>.carousel-item-header {\n    height: auto;\n  }\n\n  .carousel-item-selected>.carousel-item-body,\n  .project-item-selected>.project-item-body,\n  .project-item-selected>.carousel-item-body {\n    display: flex;\n    flex-direction: row;\n  }\n\n  .carousel-item-header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  .carousel-item-body,\n  .project-item-body {\n    display: none;\n  }\n}\n\n@media screen and (min-width: 1200px) {\n\n  .carousel-list-wrapper,\n  .carousel-list-project {\n    width: 60%;\n  }\n}", "",{"version":3,"sources":["webpack://./src/styles/carousel.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,gBAAgB;EAChB,qBAAqB;;EAErB,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;;EAEnB,UAAU;AACZ;;AAEA;EACE,UAAU;EACV,SAAS;;EAET,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;;EAEnB,UAAU;;EAEV,0BAA0B;EAC1B,2BAA2B;EAC3B,4BAA4B;AAC9B;;AAEA;EACE,SAAS;EACT,eAAe;AACjB;;AAEA;EACE,eAAe;EACf,iBAAiB;EACjB,WAAW;AACb;;AAEA;EACE,eAAe;EACf,cAAc;EACd,WAAW;EACX,YAAY;EACZ,UAAU;;EAEV,0BAA0B;;EAE1B,6BAA6B;AAC/B;;AAEA;;;EAGE,yBAAyB;AAC3B;;AAEA;;EAEE,cAAc;AAChB;;AAEA;EACE,mBAAmB;EACnB,UAAU;EACV,kBAAkB;;EAElB,aAAa;EACb,sBAAsB;;EAEtB,uCAAuC;EACvC,oCAAoC;AACtC;;AAEA;EACE,mBAAmB;EACnB,UAAU;EACV,iBAAiB;EACjB,uCAAuC;EACvC,oCAAoC;AACtC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,eAAe;AACjB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,iBAAiB;EACjB,mBAAmB;AACrB;;AAEA;;EAEE;;IAEE,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,mBAAmB;;IAEnB,UAAU;IACV,QAAQ;EACV;;EAEA;;IAEE,UAAU;IACV,SAAS;;IAET,kBAAkB;IAClB,cAAc;IACd,WAAW;;IAEX,kBAAkB;IAClB,kBAAkB;IAClB,mBAAmB;;IAEnB,YAAY;EACd;;EAEA;IACE,aAAa;EACf;;EAEA;IACE,aAAa;EACf;;EAEA;IACE,eAAe;IACf,iBAAiB;IACjB,cAAc;IACd,WAAW;IACX,YAAY;EACd;;EAEA;;;IAGE,cAAc;EAChB;;EAEA;IACE,cAAc;EAChB;;EAEA;IACE,yBAAyB;IACzB,kBAAkB;IAClB,qBAAqB;IACrB,YAAY;IACZ,aAAa;IACb,gBAAgB;IAChB,uBAAuB;IACvB,UAAU;IACV,aAAa;;IAEb,mBAAmB;IACnB,0BAA0B;;IAE1B,YAAY;EACd;;EAEA;;;KAGG;;EAEH;IACE,kBAAkB;IAClB,qBAAqB;IACrB,WAAW;;IAEX,YAAY;IACZ,aAAa;;IAEb,0CAA0C;EAC5C;;EAEA;IACE,kBAAkB;IAClB,qBAAqB;IACrB,WAAW;;IAEX,UAAU;IACV,iBAAiB;IACjB,aAAa;IACb,gBAAgB;;IAEhB,0CAA0C;EAC5C;;EAEA;IACE,UAAU;IACV,eAAe;EACjB;;EAEA;IACE,UAAU;IACV,YAAY;IACZ,iBAAiB;EACnB;;EAEA;;IAEE,YAAY;EACd;;EAEA;;;IAGE,aAAa;IACb,mBAAmB;EACrB;;EAEA;IACE,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,WAAW;IACX,YAAY;EACd;;EAEA;;IAEE,aAAa;EACf;AACF;;AAEA;;EAEE;;IAEE,UAAU;EACZ;AACF","sourcesContent":[".carousel-list-wrapper {\n  padding: 0;\n  margin: 0;\n  list-style: none;\n  text-decoration: none;\n\n  display: none;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  width: 90%;\n}\n\n.carousel-item-wrapper {\n  padding: 0;\n  margin: 0;\n\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  width: 90%;\n\n  border-top: 1px solid #333;\n  border-left: 1px solid #333;\n  border-right: 1px solid #333;\n}\n\n.remove-margin {\n  margin: 0;\n  padding: 10px 0;\n}\n\n.carousel-list {\n  cursor: pointer;\n  margin: 0 0 1px 0;\n  width: 100%;\n}\n\n.carousel-item {\n  cursor: pointer;\n  display: block;\n  width: 100%;\n  height: auto;\n  padding: 0;\n\n  transition: 0.1s left ease;\n\n  border-bottom: 1px solid #333;\n}\n\n.carousel-item:hover,\n.carousel-item:active,\n.carousel-item:focus {\n  background-color: #fdfcfc;\n}\n\n.carousel-item-selected,\n.project-item-selected {\n  display: block;\n}\n\n.project-item-selected>.carousel-item-body {\n  visibility: visible;\n  opacity: 1;\n  max-height: 1000px;\n\n  display: flex;\n  flex-direction: column;\n\n  transition: max-height 0.6s ease-in-out;\n  transition: opacity 0.1s ease-in-out;\n}\n\n.carousel-item-selected>.carousel-item-body {\n  visibility: visible;\n  opacity: 1;\n  max-height: 500px;\n  transition: max-height 0.6s ease-in-out;\n  transition: opacity 0.1s ease-in-out;\n}\n\n.carousel-item-header {\n  display: block;\n}\n\n.carousel-item-body {\n  visibility: hidden;\n  opacity: 0;\n  max-height: 0px;\n}\n\n.project-item-link {\n  color: #c86060;\n}\n\n.project-item-selected .carousel-item-body img {\n  max-height: 500px;\n  object-fit: contain;\n}\n\n@media screen and (min-width: 736px) {\n\n  .carousel-list-wrapper,\n  .carousel-list-project {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n\n    width: 80%;\n    gap: 3em;\n  }\n\n  .carousel-item-wrapper,\n  .carousel-item-project {\n    padding: 0;\n    margin: 0;\n\n    position: relative;\n    display: block;\n    width: 100%;\n\n    overflow-y: hidden;\n    overflow-x: hidden;\n    white-space: nowrap;\n\n    border: none;\n  }\n\n  .carousel-item-wrapper {\n    height: 500px;\n  }\n\n  .carousel-item-project {\n    height: 900px;\n  }\n\n  .carousel-list {\n    cursor: pointer;\n    margin: 0 0 1px 0;\n    color: #b3b4b6;\n    width: auto;\n    height: auto;\n  }\n\n  .carousel-list:hover,\n  .carousel-list:active,\n  .carousel-list:focus {\n    color: #394757;\n  }\n\n  .carousel-list-selected p {\n    color: #394757;\n  }\n\n  .carousel-item {\n    background-color: #fdfcfc;\n    position: absolute;\n    display: inline-block;\n    width: 300px;\n    height: 300px;\n    max-width: 500px;\n    /* max-height: 400px; */\n    padding: 0;\n    margin: 0 0px;\n\n    white-space: normal;\n    transition: 0.1s left ease;\n\n    border: none;\n  }\n\n  /* .carousel-item-image {\n    width: auto;\n    height: auto;\n  } */\n\n  .carousel-item-selected {\n    position: absolute;\n    display: inline-block;\n    z-index: 10;\n\n    width: 500px;\n    height: 400px;\n\n    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);\n  }\n\n  .project-item-selected {\n    position: absolute;\n    display: inline-block;\n    z-index: 10;\n\n    width: 90%;\n    max-width: 1200px;\n    height: 750px;\n    overflow: hidden;\n\n    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);\n  }\n\n  .project-item-selected .project-item-text {\n    width: 30%;\n    padding: 0 20px;\n  }\n\n  .project-item-selected .carousel-item-body img {\n    width: 70%;\n    height: auto;\n    max-height: 750px;\n  }\n\n  .carousel-item-selected>.carousel-item-header,\n  .project-item-selected>.carousel-item-header {\n    height: auto;\n  }\n\n  .carousel-item-selected>.carousel-item-body,\n  .project-item-selected>.project-item-body,\n  .project-item-selected>.carousel-item-body {\n    display: flex;\n    flex-direction: row;\n  }\n\n  .carousel-item-header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  .carousel-item-body,\n  .project-item-body {\n    display: none;\n  }\n}\n\n@media screen and (min-width: 1200px) {\n\n  .carousel-list-wrapper,\n  .carousel-list-project {\n    width: 60%;\n  }\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".carousel-list-wrapper {\n  padding: 0;\n  margin: 0;\n  list-style: none;\n  text-decoration: none;\n\n  display: none;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  width: 90%;\n}\n\n.carousel-item-wrapper {\n  padding: 0;\n  margin: 0;\n\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  width: 90%;\n\n  border-top: 1px solid #333;\n  border-left: 1px solid #333;\n  border-right: 1px solid #333;\n}\n\n.remove-margin {\n  margin: 0;\n  padding: 10px 0;\n}\n\n.carousel-list {\n  cursor: pointer;\n  margin: 0 0 1px 0;\n  width: 100%;\n}\n\n.carousel-item {\n  cursor: pointer;\n  display: block;\n  width: 100%;\n  height: auto;\n  padding: 0;\n\n  transition: 0.1s left ease;\n\n  border-bottom: 1px solid #333;\n}\n\n.carousel-item:hover,\n.carousel-item:active,\n.carousel-item:focus {\n  background-color: #fdfcfc;\n}\n\n.carousel-item-selected,\n.project-item-selected {\n  display: block;\n}\n\n.project-item-selected>.carousel-item-body {\n  visibility: visible;\n  opacity: 1;\n  max-height: 1000px;\n\n  display: flex;\n  flex-direction: column;\n\n  transition: max-height 0.6s ease-in-out;\n  transition: opacity 0.1s ease-in-out;\n}\n\n.carousel-item-selected>.carousel-item-body {\n  visibility: visible;\n  opacity: 1;\n  max-height: 500px;\n  transition: max-height 0.6s ease-in-out;\n  transition: opacity 0.1s ease-in-out;\n}\n\n.carousel-item-header {\n  display: block;\n}\n\n.carousel-item-body {\n  visibility: hidden;\n  opacity: 0;\n  max-height: 0px;\n}\n\n.project-item-link {\n  color: #c86060;\n}\n\n.project-item-selected .carousel-item-body img {\n  max-height: 500px;\n  object-fit: contain;\n}\n\n.project-item-selected .project-item-text {\n  box-sizing: border-box;\n  width: 100%;\n  padding: 0 20px;\n}\n\n@media screen and (min-width: 736px) {\n\n  .carousel-list-wrapper,\n  .carousel-list-project {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n\n    width: 80%;\n    gap: 3em;\n  }\n\n  .carousel-item-wrapper,\n  .carousel-item-project {\n    padding: 0;\n    margin: 0;\n\n    position: relative;\n    display: block;\n    width: 100%;\n\n    overflow-y: hidden;\n    overflow-x: hidden;\n    white-space: nowrap;\n\n    border: none;\n  }\n\n  .carousel-item-wrapper {\n    height: 500px;\n  }\n\n  .carousel-item-project {\n    height: 900px;\n  }\n\n  .carousel-list {\n    cursor: pointer;\n    margin: 0 0 1px 0;\n    color: #b3b4b6;\n    width: auto;\n    height: auto;\n  }\n\n  .carousel-list:hover,\n  .carousel-list:active,\n  .carousel-list:focus {\n    color: #394757;\n  }\n\n  .carousel-list-selected p {\n    color: #394757;\n  }\n\n  .carousel-item {\n    background-color: #fdfcfc;\n    position: absolute;\n    display: inline-block;\n    width: 300px;\n    height: 300px;\n    max-width: 500px;\n    /* max-height: 400px; */\n    padding: 0;\n    margin: 0 0px;\n\n    white-space: normal;\n    transition: 0.1s left ease;\n\n    border: none;\n  }\n\n  /* .carousel-item-image {\n    width: auto;\n    height: auto;\n  } */\n\n  .carousel-item-selected {\n    position: absolute;\n    display: inline-block;\n    z-index: 10;\n\n    width: 500px;\n    height: 400px;\n\n    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);\n  }\n\n  .project-item-selected {\n    position: absolute;\n    display: inline-block;\n    z-index: 10;\n\n    width: 90%;\n    max-width: 1000px;\n    height: 750px;\n    overflow: hidden;\n\n    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);\n  }\n\n  /* .project-item-selected .project-item-text {\n    width: 100%;\n    padding: 0 20px;\n  } */\n\n  .project-item-selected .carousel-item-body img {\n    width: 100%;\n    height: auto;\n    max-height: 450px;\n  }\n\n  .carousel-item-selected>.carousel-item-header,\n  .project-item-selected>.carousel-item-header {\n    height: auto;\n  }\n\n  .carousel-item-selected>.carousel-item-body {\n    /* .project-item-selected>.project-item-body, */\n    /* .project-item-selected>.carousel-item-body { */\n\n    display: flex;\n    flex-direction: row;\n  }\n\n  .carousel-item-header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  .carousel-item-body,\n  .project-item-body {\n    display: none;\n  }\n}\n\n@media screen and (min-width: 1200px) {\n\n  .carousel-list-wrapper,\n  .carousel-list-project {\n    width: 60%;\n  }\n}", "",{"version":3,"sources":["webpack://./src/styles/carousel.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,SAAS;EACT,gBAAgB;EAChB,qBAAqB;;EAErB,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;;EAEnB,UAAU;AACZ;;AAEA;EACE,UAAU;EACV,SAAS;;EAET,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;;EAEnB,UAAU;;EAEV,0BAA0B;EAC1B,2BAA2B;EAC3B,4BAA4B;AAC9B;;AAEA;EACE,SAAS;EACT,eAAe;AACjB;;AAEA;EACE,eAAe;EACf,iBAAiB;EACjB,WAAW;AACb;;AAEA;EACE,eAAe;EACf,cAAc;EACd,WAAW;EACX,YAAY;EACZ,UAAU;;EAEV,0BAA0B;;EAE1B,6BAA6B;AAC/B;;AAEA;;;EAGE,yBAAyB;AAC3B;;AAEA;;EAEE,cAAc;AAChB;;AAEA;EACE,mBAAmB;EACnB,UAAU;EACV,kBAAkB;;EAElB,aAAa;EACb,sBAAsB;;EAEtB,uCAAuC;EACvC,oCAAoC;AACtC;;AAEA;EACE,mBAAmB;EACnB,UAAU;EACV,iBAAiB;EACjB,uCAAuC;EACvC,oCAAoC;AACtC;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,kBAAkB;EAClB,UAAU;EACV,eAAe;AACjB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,iBAAiB;EACjB,mBAAmB;AACrB;;AAEA;EACE,sBAAsB;EACtB,WAAW;EACX,eAAe;AACjB;;AAEA;;EAEE;;IAEE,aAAa;IACb,mBAAmB;IACnB,uBAAuB;IACvB,mBAAmB;;IAEnB,UAAU;IACV,QAAQ;EACV;;EAEA;;IAEE,UAAU;IACV,SAAS;;IAET,kBAAkB;IAClB,cAAc;IACd,WAAW;;IAEX,kBAAkB;IAClB,kBAAkB;IAClB,mBAAmB;;IAEnB,YAAY;EACd;;EAEA;IACE,aAAa;EACf;;EAEA;IACE,aAAa;EACf;;EAEA;IACE,eAAe;IACf,iBAAiB;IACjB,cAAc;IACd,WAAW;IACX,YAAY;EACd;;EAEA;;;IAGE,cAAc;EAChB;;EAEA;IACE,cAAc;EAChB;;EAEA;IACE,yBAAyB;IACzB,kBAAkB;IAClB,qBAAqB;IACrB,YAAY;IACZ,aAAa;IACb,gBAAgB;IAChB,uBAAuB;IACvB,UAAU;IACV,aAAa;;IAEb,mBAAmB;IACnB,0BAA0B;;IAE1B,YAAY;EACd;;EAEA;;;KAGG;;EAEH;IACE,kBAAkB;IAClB,qBAAqB;IACrB,WAAW;;IAEX,YAAY;IACZ,aAAa;;IAEb,0CAA0C;EAC5C;;EAEA;IACE,kBAAkB;IAClB,qBAAqB;IACrB,WAAW;;IAEX,UAAU;IACV,iBAAiB;IACjB,aAAa;IACb,gBAAgB;;IAEhB,0CAA0C;EAC5C;;EAEA;;;KAGG;;EAEH;IACE,WAAW;IACX,YAAY;IACZ,iBAAiB;EACnB;;EAEA;;IAEE,YAAY;EACd;;EAEA;IACE,+CAA+C;IAC/C,iDAAiD;;IAEjD,aAAa;IACb,mBAAmB;EACrB;;EAEA;IACE,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,WAAW;IACX,YAAY;EACd;;EAEA;;IAEE,aAAa;EACf;AACF;;AAEA;;EAEE;;IAEE,UAAU;EACZ;AACF","sourcesContent":[".carousel-list-wrapper {\n  padding: 0;\n  margin: 0;\n  list-style: none;\n  text-decoration: none;\n\n  display: none;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  width: 90%;\n}\n\n.carousel-item-wrapper {\n  padding: 0;\n  margin: 0;\n\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  width: 90%;\n\n  border-top: 1px solid #333;\n  border-left: 1px solid #333;\n  border-right: 1px solid #333;\n}\n\n.remove-margin {\n  margin: 0;\n  padding: 10px 0;\n}\n\n.carousel-list {\n  cursor: pointer;\n  margin: 0 0 1px 0;\n  width: 100%;\n}\n\n.carousel-item {\n  cursor: pointer;\n  display: block;\n  width: 100%;\n  height: auto;\n  padding: 0;\n\n  transition: 0.1s left ease;\n\n  border-bottom: 1px solid #333;\n}\n\n.carousel-item:hover,\n.carousel-item:active,\n.carousel-item:focus {\n  background-color: #fdfcfc;\n}\n\n.carousel-item-selected,\n.project-item-selected {\n  display: block;\n}\n\n.project-item-selected>.carousel-item-body {\n  visibility: visible;\n  opacity: 1;\n  max-height: 1000px;\n\n  display: flex;\n  flex-direction: column;\n\n  transition: max-height 0.6s ease-in-out;\n  transition: opacity 0.1s ease-in-out;\n}\n\n.carousel-item-selected>.carousel-item-body {\n  visibility: visible;\n  opacity: 1;\n  max-height: 500px;\n  transition: max-height 0.6s ease-in-out;\n  transition: opacity 0.1s ease-in-out;\n}\n\n.carousel-item-header {\n  display: block;\n}\n\n.carousel-item-body {\n  visibility: hidden;\n  opacity: 0;\n  max-height: 0px;\n}\n\n.project-item-link {\n  color: #c86060;\n}\n\n.project-item-selected .carousel-item-body img {\n  max-height: 500px;\n  object-fit: contain;\n}\n\n.project-item-selected .project-item-text {\n  box-sizing: border-box;\n  width: 100%;\n  padding: 0 20px;\n}\n\n@media screen and (min-width: 736px) {\n\n  .carousel-list-wrapper,\n  .carousel-list-project {\n    display: flex;\n    flex-direction: row;\n    justify-content: center;\n    align-items: center;\n\n    width: 80%;\n    gap: 3em;\n  }\n\n  .carousel-item-wrapper,\n  .carousel-item-project {\n    padding: 0;\n    margin: 0;\n\n    position: relative;\n    display: block;\n    width: 100%;\n\n    overflow-y: hidden;\n    overflow-x: hidden;\n    white-space: nowrap;\n\n    border: none;\n  }\n\n  .carousel-item-wrapper {\n    height: 500px;\n  }\n\n  .carousel-item-project {\n    height: 900px;\n  }\n\n  .carousel-list {\n    cursor: pointer;\n    margin: 0 0 1px 0;\n    color: #b3b4b6;\n    width: auto;\n    height: auto;\n  }\n\n  .carousel-list:hover,\n  .carousel-list:active,\n  .carousel-list:focus {\n    color: #394757;\n  }\n\n  .carousel-list-selected p {\n    color: #394757;\n  }\n\n  .carousel-item {\n    background-color: #fdfcfc;\n    position: absolute;\n    display: inline-block;\n    width: 300px;\n    height: 300px;\n    max-width: 500px;\n    /* max-height: 400px; */\n    padding: 0;\n    margin: 0 0px;\n\n    white-space: normal;\n    transition: 0.1s left ease;\n\n    border: none;\n  }\n\n  /* .carousel-item-image {\n    width: auto;\n    height: auto;\n  } */\n\n  .carousel-item-selected {\n    position: absolute;\n    display: inline-block;\n    z-index: 10;\n\n    width: 500px;\n    height: 400px;\n\n    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);\n  }\n\n  .project-item-selected {\n    position: absolute;\n    display: inline-block;\n    z-index: 10;\n\n    width: 90%;\n    max-width: 1000px;\n    height: 750px;\n    overflow: hidden;\n\n    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);\n  }\n\n  /* .project-item-selected .project-item-text {\n    width: 100%;\n    padding: 0 20px;\n  } */\n\n  .project-item-selected .carousel-item-body img {\n    width: 100%;\n    height: auto;\n    max-height: 450px;\n  }\n\n  .carousel-item-selected>.carousel-item-header,\n  .project-item-selected>.carousel-item-header {\n    height: auto;\n  }\n\n  .carousel-item-selected>.carousel-item-body {\n    /* .project-item-selected>.project-item-body, */\n    /* .project-item-selected>.carousel-item-body { */\n\n    display: flex;\n    flex-direction: row;\n  }\n\n  .carousel-item-header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n  }\n\n  .carousel-item-body,\n  .project-item-body {\n    display: none;\n  }\n}\n\n@media screen and (min-width: 1200px) {\n\n  .carousel-list-wrapper,\n  .carousel-list-project {\n    width: 60%;\n  }\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1388,6 +1388,12 @@ const projects = [
         class: "carousel-item-body",
         children: [
           {
+            element: "img",
+            class: "carousel-item-image",
+            src: "./images/beersite.png",
+            alt: "beer site",
+          },
+          {
             element: "div",
             class: "project-item-text",
             children: [
@@ -1395,15 +1401,10 @@ const projects = [
                 element: "p",
                 class: "remove-margin",
                 text: `
-                During the quarantine I found a passion<br>
-                for beer brewing.<br>
-                Therefore I have built a website<br>
-                dedicated to this hobby.<br>
+                During the quarantine I found a passion for beer brewing.Therefore I have built a website dedicated to this hobby.<br>
+                The website is server-side rendered using NodeJs. It is hosted on Heroku and is deployed as a docker container.<br>
                 <br>
-                The website is server-side rendered using NodeJs.<br>
-                It is hosted on Heroku and is deployed as a docker container.<br>
-                <br>
-                As my portfolio of homebrew grows, so will this website.<br>
+                As my portfolio of homebrew grows, so will this website.
                 <br>
                 `,
               },
@@ -1415,12 +1416,7 @@ const projects = [
               },
             ],
           },
-          {
-            element: "img",
-            class: "carousel-item-image",
-            src: "./images/beersite.png",
-            alt: "beer site",
-          },
+
         ],
       },
     ],
@@ -1439,6 +1435,12 @@ const projects = [
         class: "carousel-item-body",
         children: [
           {
+            element: "img",
+            class: "carousel-item-image",
+            src: "./images/easylist_phone.jpg",
+            alt: "easylist",
+          },
+          {
             element: "div",
             class: "project-item-text",
             children: [
@@ -1446,10 +1448,7 @@ const projects = [
                 element: "p",
                 class: "remove-margin",
                 text: `
-                A simple todo application built<br>
-                for personal use.<br>
-                The app itself is made with React<br>
-                and Mantine UI library.`,
+                A simple todo application built for personal use. The app itself is made with React and Mantine UI library.`,
               },
               {
                 element: "a",
@@ -1461,8 +1460,7 @@ const projects = [
                 element: "p",
                 class: "remove-margin",
                 text: `
-                Additionally, the api was built<br>
-                using nodeJs, Express and MongoDB.<br>`,
+                Additionally, the api was built using nodeJs, Express and MongoDB.`,
               },
               {
                 element: "a",
@@ -1471,12 +1469,6 @@ const projects = [
                 href: "https://github.com/JohanGJensen/EasyList_RESTAPI",
               },
             ],
-          },
-          {
-            element: "img",
-            class: "carousel-item-image",
-            src: "./images/easylist_phone.jpg",
-            alt: "easylist",
           },
         ],
       },
@@ -1496,6 +1488,12 @@ const projects = [
         class: "carousel-item-body",
         children: [
           {
+            element: "img",
+            class: "carousel-item-image",
+            src: "./images/flaskeposten.jpg",
+            alt: "easylist",
+          },
+          {
             element: "div",
             class: "project-item-text",
             children: [
@@ -1503,8 +1501,7 @@ const projects = [
                 element: "p",
                 class: "remove-margin",
                 text: `
-                A small chat app written<br>
-                with NodeJS & React.<br><br>
+                A small chat app written with NodeJS & React.<br>
                 This project uses:<br>
                 - Websockets<br>
                 - Tailwind css<br>
@@ -1518,12 +1515,6 @@ const projects = [
                 href: "https://github.com/JohanGJensen/flaskepost",
               },
             ],
-          },
-          {
-            element: "img",
-            class: "carousel-item-image",
-            src: "./images/flaskeposten.jpg",
-            alt: "easylist",
           },
         ],
       },

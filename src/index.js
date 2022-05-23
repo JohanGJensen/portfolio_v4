@@ -176,6 +176,12 @@ const projects = [
         class: "carousel-item-body",
         children: [
           {
+            element: "img",
+            class: "carousel-item-image",
+            src: "./images/beersite.png",
+            alt: "beer site",
+          },
+          {
             element: "div",
             class: "project-item-text",
             children: [
@@ -183,15 +189,10 @@ const projects = [
                 element: "p",
                 class: "remove-margin",
                 text: `
-                During the quarantine I found a passion<br>
-                for beer brewing.<br>
-                Therefore I have built a website<br>
-                dedicated to this hobby.<br>
+                During the quarantine I found a passion for beer brewing.Therefore I have built a website dedicated to this hobby.<br>
+                The website is server-side rendered using NodeJs. It is hosted on Heroku and is deployed as a docker container.<br>
                 <br>
-                The website is server-side rendered using NodeJs.<br>
-                It is hosted on Heroku and is deployed as a docker container.<br>
-                <br>
-                As my portfolio of homebrew grows, so will this website.<br>
+                As my portfolio of homebrew grows, so will this website.
                 <br>
                 `,
               },
@@ -203,12 +204,7 @@ const projects = [
               },
             ],
           },
-          {
-            element: "img",
-            class: "carousel-item-image",
-            src: "./images/beersite.png",
-            alt: "beer site",
-          },
+
         ],
       },
     ],
@@ -227,6 +223,12 @@ const projects = [
         class: "carousel-item-body",
         children: [
           {
+            element: "img",
+            class: "carousel-item-image",
+            src: "./images/easylist_phone.jpg",
+            alt: "easylist",
+          },
+          {
             element: "div",
             class: "project-item-text",
             children: [
@@ -234,10 +236,7 @@ const projects = [
                 element: "p",
                 class: "remove-margin",
                 text: `
-                A simple todo application built<br>
-                for personal use.<br>
-                The app itself is made with React<br>
-                and Mantine UI library.`,
+                A simple todo application built for personal use. The app itself is made with React and Mantine UI library.`,
               },
               {
                 element: "a",
@@ -249,8 +248,7 @@ const projects = [
                 element: "p",
                 class: "remove-margin",
                 text: `
-                Additionally, the api was built<br>
-                using nodeJs, Express and MongoDB.<br>`,
+                Additionally, the api was built using nodeJs, Express and MongoDB.`,
               },
               {
                 element: "a",
@@ -259,12 +257,6 @@ const projects = [
                 href: "https://github.com/JohanGJensen/EasyList_RESTAPI",
               },
             ],
-          },
-          {
-            element: "img",
-            class: "carousel-item-image",
-            src: "./images/easylist_phone.jpg",
-            alt: "easylist",
           },
         ],
       },
@@ -284,6 +276,12 @@ const projects = [
         class: "carousel-item-body",
         children: [
           {
+            element: "img",
+            class: "carousel-item-image",
+            src: "./images/flaskeposten.jpg",
+            alt: "easylist",
+          },
+          {
             element: "div",
             class: "project-item-text",
             children: [
@@ -291,8 +289,7 @@ const projects = [
                 element: "p",
                 class: "remove-margin",
                 text: `
-                A small chat app written<br>
-                with NodeJS & React.<br><br>
+                A small chat app written with NodeJS & React.<br>
                 This project uses:<br>
                 - Websockets<br>
                 - Tailwind css<br>
@@ -306,12 +303,6 @@ const projects = [
                 href: "https://github.com/JohanGJensen/flaskepost",
               },
             ],
-          },
-          {
-            element: "img",
-            class: "carousel-item-image",
-            src: "./images/flaskeposten.jpg",
-            alt: "easylist",
           },
         ],
       },
