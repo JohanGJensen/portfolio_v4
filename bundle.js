@@ -1412,7 +1412,7 @@ const projects = [
                 element: "a",
                 class: "project-item-link",
                 text: "Go to Application",
-                href: "https://beer-site-container.herokuapp.com/",
+                href: "http://beersite-env.eba-sbz3k8ht.eu-north-1.elasticbeanstalk.com/",
               },
             ],
           },
